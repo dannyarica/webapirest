@@ -1,13 +1,8 @@
-﻿using BasicApiResponse.Filters;
-using BasicApiResponse.Models.Dto;
+﻿using BasicApiResponse.Models.Dto;
 using BasicApiResponse.Models.Request;
 using BasicApiResponse.Models.Response;
 using BasicApiResponse.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 
 namespace BasicApiResponse.Controllers
@@ -16,13 +11,14 @@ namespace BasicApiResponse.Controllers
     public class UserController : BaseController
     {
         private IUserService _userService;
+
         public UserController(IUserService userService)
         {
             _userService = userService;
         }
 
         [HttpGet]
-        [Route("{userid:length(10)}", Name = "GetUserById")]
+        [Route("{userid:length(10)}", Name = "GetUser")]
         public IHttpActionResult GetUserById(string userid)
         {
             var user = _userService.GetUser(userid);
@@ -34,7 +30,7 @@ namespace BasicApiResponse.Controllers
                     Title = "Usuario",
                     UserMessage = "No se ha encontrado el usuario ingresado"
                 };
-                return Content(System.Net.HttpStatusCode.NotFound, errorResponse);
+                return Content(HttpStatusCode.NotFound, errorResponse);
             }
 
             return Ok(user);

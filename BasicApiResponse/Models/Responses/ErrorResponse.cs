@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace BasicApiResponse.Models.Response
+﻿namespace BasicApiResponse.Models.Response
 {
     public class ErrorResponse
     {

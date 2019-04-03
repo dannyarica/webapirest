@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace BasicApiResponse.Models.Request
 {
@@ -10,6 +6,7 @@ namespace BasicApiResponse.Models.Request
     {
         [Required]
         public string DeviceId { get; set; }
+
         [Required]
         public T Model { get; set; }
     }

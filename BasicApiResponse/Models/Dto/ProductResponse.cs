@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-
-namespace BasicApiResponse.Models.Dto
+﻿namespace BasicApiResponse.Models.Dto
 {
     public class ProductResponse
     {

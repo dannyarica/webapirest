@@ -1,5 +1,4 @@
-﻿using BasicApiResponse.Filters;
-using BasicApiResponse.Models.Dto;
+﻿using BasicApiResponse.Models.Dto;
 using BasicApiResponse.Models.Request;
 using BasicApiResponse.Services;
 using System.Web.Http;
@@ -7,7 +6,6 @@ using System.Web.Http;
 namespace BasicApiResponse.Controllers
 {
     [RoutePrefix("api/v1/users/{userid:length(10)}/devices/{deviceid}/terms-conditions")]
-    [ValidationActionFilter]
     public class TermsConditionsController : ApiController
     {
         private IUserService _userService;
@@ -49,7 +47,7 @@ namespace BasicApiResponse.Controllers
 
         [HttpPost]
         [Route("", Name = "AcceptTermsConditions")]
-        public IHttpActionResult AcceptTermsConditions(string userid, string deviceid, [FromBody]BaseApiRequest<TermsConditions> termsConditionsRequest)
+        public IHttpActionResult Post(string userid, string deviceid, [FromBody]BaseApiRequest<TermsConditions> termsConditionsRequest)
         {
             return Created(Url.Link(nameof(this.GetTermsConditions), new { userid, deviceid }), termsConditionsRequest.Model);
         }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 using Newtonsoft.Json.Serialization;
+using BasicApiResponse.Filters;
 
 namespace BasicApiResponse
 {
@@ -34,6 +35,9 @@ namespace BasicApiResponse
                 ContractResolver = new CamelCasePropertyNamesContractResolver(),
                 NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore
             };
+
+            //filters
+            config.Filters.Add(new ValidationActionFilter());
 
             //message handlers
             config.MessageHandlers.Add(new ApiResponseDelegate());

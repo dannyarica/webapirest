@@ -157,24 +157,20 @@
     <Compile Include="Models\Dto\TermsConditionsResponse.cs" />
     <Compile Include="Models\Dto\User.cs" />
     <Compile Include="Models\Dto\UserProductsResponse.cs" />
-    <Compile Include="Models\Enrichers\IEnricher.cs" />
-    <Compile Include="Models\Enrichers\ModelEnricher.cs" />
-    <Compile Include="Models\Enrichers\RateEnricher.cs" />
     <Compile Include="Models\Request\BaseApiRequest.cs" />
     <Compile Include="Models\Responses\BaseApiResponse.cs" />
     <Compile Include="Models\Responses\ErrorResponse.cs" />
     <Compile Include="Models\Responses\HyperMediaLink.cs" />
-    <Compile Include="Models\Responses\LinkHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\DevicePhoneService.cs" />
     <Compile Include="Services\DeviceService.cs" />
-    <Compile Include="Services\IDevicePhoneService.cs" />
-    <Compile Include="Services\IDeviceService.cs" />
-    <Compile Include="Services\IProductService.cs" />
-    <Compile Include="Services\IRateService.cs" />
-    <Compile Include="Services\ITermsConditionsService.cs" />
-    <Compile Include="Services\IUserProductBankAccountService.cs" />
-    <Compile Include="Services\IUserService.cs" />
+    <Compile Include="Services\Interfaces\IDevicePhoneService.cs" />
+    <Compile Include="Services\Interfaces\IDeviceService.cs" />
+    <Compile Include="Services\Interfaces\IProductService.cs" />
+    <Compile Include="Services\Interfaces\IRateService.cs" />
+    <Compile Include="Services\Interfaces\ITermsConditionsService.cs" />
+    <Compile Include="Services\Interfaces\IUserProductBankAccountService.cs" />
+    <Compile Include="Services\Interfaces\IUserService.cs" />
     <Compile Include="Services\RateService.cs" />
     <Compile Include="Services\ProductService.cs" />
     <Compile Include="Services\TermsConditionsService.cs" />
@@ -192,6 +188,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\Enrichers\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
