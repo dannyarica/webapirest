@@ -1,13 +1,14 @@
 ﻿using BasicApiResponse.Models.Dto;
 using BasicApiResponse.Models.Request;
 using BasicApiResponse.Models.Response;
+using BasicApiResponse.RoutePrefixes;
 using BasicApiResponse.Services;
 using System.Net;
 using System.Web.Http;
 
-namespace BasicApiResponse.Controllers
+namespace BasicApiResponse.Controllers.v1
 {
-    [RoutePrefix("api/v1/users")]
+    [ApiVersion1RoutePrefix("users")]
     public class UserController : BaseController
     {
         private IUserService _userService;

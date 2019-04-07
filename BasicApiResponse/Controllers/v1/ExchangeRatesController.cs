@@ -1,17 +1,18 @@
 ﻿using BasicApiResponse.Models.Dto;
 using BasicApiResponse.Models.Response;
+using BasicApiResponse.RoutePrefixes;
 using BasicApiResponse.Services;
 using System;
 using System.Collections.Generic;
 using System.Web.Http;
 
-namespace BasicApiResponse.Controllers
+namespace BasicApiResponse.Controllers.v1
 {
-    [RoutePrefix("api/v1/rates")]
-    public class RatesController : ApiController
+    [ApiVersion1RoutePrefix("exchange-rates")]
+    public class ExchangeRatesController : ApiController
     {
         private IRateService _rateService;
-        public RatesController(IRateService rateService)
+        public ExchangeRatesController(IRateService rateService)
         {
             _rateService = rateService;
         }

@@ -46,7 +46,7 @@ namespace BasicApiResponse.Services
         }
 
         public string GetTermsConditionsUri()
-            => ConfigurationManager.AppSettings["TermsConditionsUri"];
+            => ConfigurationManager.AppSettings["TermsConditionsUrl"];
 
         public TermsConditions GetTermsConditions(string userid, string deviceid)
             => listTermsConditions.FirstOrDefault(x => x.UserId == userid && x.DeviceId == deviceid);

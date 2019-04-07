@@ -1,9 +1,10 @@
-﻿using BasicApiResponse.Services;
+﻿using BasicApiResponse.RoutePrefixes;
+using BasicApiResponse.Services;
 using System.Web.Http;
 
-namespace BasicApiResponse.Controllers
+namespace BasicApiResponse.Controllers.v1
 {
-    [RoutePrefix("api/v1/users/{userid:length(10)}/products")]
+    [ApiVersion1RoutePrefix("users/{userid:length(10)}/products")]
     public class ProductsController : ApiController
     {
         private IUserService _userService;

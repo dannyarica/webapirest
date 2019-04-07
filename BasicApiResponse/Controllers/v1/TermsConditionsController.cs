@@ -1,11 +1,12 @@
 ﻿using BasicApiResponse.Models.Dto;
 using BasicApiResponse.Models.Request;
+using BasicApiResponse.RoutePrefixes;
 using BasicApiResponse.Services;
 using System.Web.Http;
 
-namespace BasicApiResponse.Controllers
+namespace BasicApiResponse.Controllers.v1
 {
-    [RoutePrefix("api/v1/users/{userid:length(10)}/devices/{deviceid}/terms-conditions")]
+    [ApiVersion1RoutePrefix("users/{userid:length(10)}/devices/{deviceid}/terms-conditions")]
     public class TermsConditionsController : ApiController
     {
         private IUserService _userService;
