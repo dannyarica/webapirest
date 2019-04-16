@@ -136,6 +136,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\v1\HelpController.cs" />
     <Compile Include="Controllers\v1\ProductsController.cs" />
     <Compile Include="Controllers\v1\ExchangeRatesController.cs" />
     <Compile Include="Controllers\v1\TermsConditionsController.cs" />

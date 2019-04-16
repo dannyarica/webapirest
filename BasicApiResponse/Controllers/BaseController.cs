@@ -10,5 +10,6 @@ namespace BasicApiResponse.Controllers
             string uri = Url.Link(routeName, routeValues);
             return new Uri(uri);
         }
+
     }
 }
