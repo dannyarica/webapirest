@@ -55,14 +55,14 @@ namespace BasicApiResponse.Delegates
                 }
             }
 
-            var newRespone = request.CreateResponse(response.StatusCode, baseResponse);
+            var newResponse = request.CreateResponse(response.StatusCode, baseResponse);
 
             foreach(var header in response.Headers)
             {
-                newRespone.Headers.Add(header.Key, header.Value);
+                newResponse.Headers.Add(header.Key, header.Value);
             }
 
-            return newRespone;
+            return newResponse;
         }
     }
 }

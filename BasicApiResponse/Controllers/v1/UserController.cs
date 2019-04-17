@@ -19,7 +19,7 @@ namespace BasicApiResponse.Controllers.v1
         }
 
         [HttpGet]
-        [Route("{userid:length(10)}", Name = "GetUser")]
+        [Route("{userid:length(10)}", Name = "GetUserById")]
         public IHttpActionResult GetUserById(string userid)
         {
             var user = _userService.GetUser(userid);
